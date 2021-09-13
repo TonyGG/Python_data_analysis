@@ -1,3 +1,8 @@
+# Read excel
+cost_map = pd.read_excel(
+                f"{path}/{market}/{category}_MARGIN.xlsx", sheet_name="MarginCost")
+
+
 # Write df to excel sheets
 # call the class 
 writer = pd.ExcelWriter(excel_sheet_path, engine='xlsxwriter')
