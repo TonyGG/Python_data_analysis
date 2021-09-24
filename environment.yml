@@ -1,3 +1,4 @@
+#this is a template of yml file
 name: env_name
 channels:
   - conda-forge
