@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 sns.set(style='ticks', palette='Set2')
 
 # Load data as explained in introductory lesson
+# note: load data from sklearn is not pd.dataframe by default.
+# need to use pd.DataFrame to covert
 boston_data = load_boston()
 boston_df = pd.DataFrame(boston_data.data, columns=boston_data.feature_names)
 
