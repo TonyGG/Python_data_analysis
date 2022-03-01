@@ -1,0 +1,33 @@
+# normal dataframe
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName('sparkdf').getOrCreate()
+data = [["1", "sravan", "vignan"],
+        ["2", "ojaswi", "vvit"],
+        ["3", "rohith", "vvit"],
+        ["4", "sridevi", "vignan"],
+        ["6", "ravi", "vrs"],
+        ["5", "gnanesh", "iit"]]
+  
+# specify column names
+columns = ['ID', 'NAME', 'college']
+  
+# creating a dataframe from the lists of data
+dataframe = spark.createDataFrame(data, columns)
+  
+dataframe.show()
+
+
+# dataframe with only one column from list
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName('sparkdf').getOrCreate()
+exception_list0_replace = ['GG2E3N5',
+'GG2E3M8',
+'GG2E3I0'
+]
+def convert_list_dic(lst:list, key:str):
+    result = []
+    for i in range(len(lst)):
+        res_dct = {key: lst[i]}
+        result.append(res_dct)
+    return result
+dataframe = convert_list_dic(exception_list0_replace, 'class_id')
